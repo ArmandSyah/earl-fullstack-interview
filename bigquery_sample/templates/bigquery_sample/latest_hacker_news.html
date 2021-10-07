@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Latest HackerNews</title>
+</head>
+<body>
+    <h1>The Latest HackerNews Threads</h1>
+    <ul>
+        {% for row in latest_hacker_news_query%}
+            <li>Title: {{ row.title }} - Author: {{ row.author }} - Date Published: {{row.time_ts}}</li>
+        {% endfor %}
+    </ul>
+</body>

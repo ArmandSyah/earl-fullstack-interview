@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Top Sample Commits</title>
+</head>
+<body>
+    <h1>Top Sample Commits</h1>
+    <ul>
+        {% for row in sample_commits_by_year%}
+            <li>Author: {{ row.name }} - Total Commits: {{ row.total_commits }}</li>
+        {% endfor %}
+    </ul>
+</body>
